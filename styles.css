@@ -86,14 +86,63 @@
     border-radius: 5px;
     background-color: #ff8177;
     color: aliceblue;
+    
 }
 
 .button:hover{
-    background-image: linear-gradient(to top, rgb(73, 10, 48) 0%, rgb(32, 5, 36) 100%);
+    background-image: linear-gradient(to top, rgb(11, 11, 156) 0%, rgb(109, 189, 219) 100%);
     transition: all 0.3s ease;
+    box-shadow: -5px 0px 20px 5px #ede3ef;
 }
 
 .navbar__link:hover{
     color:#ff0844;
     transition: all 0.3s ease;
+}
+
+@media screen and (max-width:960px) {
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu:active{
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem
+
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle.bar{
+        width:250px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #ffff;
+    }
 }
